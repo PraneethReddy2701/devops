@@ -19,7 +19,7 @@ Backend WebSocket Application (Docker Container)
 ```
 
 
-## 🐳 Docker Setup
+## Docker Setup
 
 ### Containers:
 
@@ -58,20 +58,6 @@ NGINX is configured to:
 * Serve frontend files
 * Route API/WebSocket requests to backend container
 * Handle WebSocket upgrade headers
-
-### Key Configuration:
-
-```nginx
-location /socket.io/ {
-    proxy_pass http://backend:3000;
-
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "Upgrade";
-
-    proxy_set_header Host $host;
-}
-```
 
 ---
 
