@@ -6,8 +6,8 @@ services:
     container_name: chat-backend
     expose:
       - "8000"
-    entrypoint: []
-    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]  # overriding the ip to communicate between containers
+   # entrypoint: []
+   # command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]  # overriding the ip to communicate between containers
     restart: always
 
   nginx:
